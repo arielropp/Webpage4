@@ -1,3 +1,8 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/Montserrat-Italic.ttf);
+}
+
 body{
   background: #509880;
   display: flex;
@@ -18,6 +23,12 @@ body{
   width: 500px;
 }
 
+#hero-image {
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+
 #content-box{
   background: #FFF;
   padding: 15px;
@@ -26,18 +37,18 @@ body{
 
 ul {
   position: relative;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   list-style-type: none;
-  padding: 0px;
+  padding: 15px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
-  background: #FFF;
-  padding: 15px;
+  padding: 20px;
   font-family: sans-serif;
+  color: #FFF;
 }
 
 a:hover {
@@ -45,5 +56,5 @@ a:hover {
 }
 
 a:visited {
-  color: #509880;
+  color: #000;
 }

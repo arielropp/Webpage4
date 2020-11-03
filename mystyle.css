@@ -1,25 +1,40 @@
 @font-face {
-  font-family: myFirstFont;
+  font-family: FirstFont;
+  src: url(fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: SecondFont;
   src: url(fonts/Lobster-Regular.ttf);
 }
 
 @font-face {
-  font-family: mySecondFont;
+  font-family: BodyFont;
   src: url(fonts/Lato-Regular.ttf);
 }
 
 body{
-  background: #509880;
   display: flex;
   justify-content: center;
+  background: repeating-linear-gradient(
+  45deg,
+  #75d6fc,
+  #75d6fc 10px,
+  #6bdbd9 10px,
+  #6bdbd9 20px
+);
 }
 
 #main-title{
   font-size: 30px;
-  font-family: myFirstFont;
+  font-family: FirstFont;
   color: #010101;
   display: flex;
   justify-content: center;
+}
+
+h2 {
+  font-family: SecondFont;
 }
 
 #container{
@@ -37,11 +52,60 @@ body{
   height: 250px;
 }
 
+#slider {
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider {
+  0% {
+      left: 0;
+  }
+  20% {
+      left: 0;
+  }
+  25% {
+      left: -100%;
+  }
+  45% {
+      left: -100%;
+  }
+  50% {
+      left: -200%;
+  }
+  70% {
+      left: -200%;
+  }
+  75% {
+      left: -300%;
+  }
+  95% {
+      left: -300%;
+  }
+  100% {
+      left: -400%;
+  }
+}
+
 #content-box{
-  background: #FFF;
+  background: #e8f2fc;
   padding: 15px;
   margin-bottom: 15px;
-  font-family: mySecondFont;
+  font-family: BodyFont;
+  box-shadow: 7px 7px 5px #6f7070;
 }
 
 ul {
@@ -53,7 +117,7 @@ ul {
   display: flex;
   justify-content: center;
   font-size: 20px;
-  font-family: mySecondFont;
+  font-family: BodyFont;
 }
 
 a {
@@ -64,7 +128,7 @@ a {
 }
 
 a:hover {
-  background: #CCC;
+  background: #e8f2fc;
 }
 
 a:visited {
